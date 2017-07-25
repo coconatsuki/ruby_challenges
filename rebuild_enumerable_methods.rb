@@ -70,10 +70,10 @@ class Rebuild_enumerable_methods
   def my_map(array, proc=nil, &block)
     new_array = []
     object_to_call = proc || block
-      self.my_each(array) do |element|
-        new_array << object_to_call.call(element)
-      end
-      p new_array
+    self.my_each(array) do |element|
+      new_array << object_to_call.call(element)
+    end
+    p new_array
   end
 
   def my_inject(array)
